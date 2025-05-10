@@ -1,0 +1,10 @@
+CREATE DATABASE ChatApp;
+USE ChatApp;
+CREATE TABLE Users (
+    user_id INT PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(100) NOT NULL,
+    nationality VARCHAR(50),
+    gender ENUM('Male', 'Female') NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
